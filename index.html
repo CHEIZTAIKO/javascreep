@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <title>sass completo</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+    <h1>TAIKO</h1>
+    <!--lugar para logo-->
+    <img src="img/guitar.png" alt="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#productos">productos</a></li>
+            <li><a href="#vendidos">+ vendidos</a></li>
+            <li><a href="#contactos">contacto</a></li>
+            <li><a href="#informacion">informacion</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="vendidos" id="vendidos">
+        <h2>+ VENDIDOS</h2>
+        <!--espacio para carrousel con javascript-->
+
+    </section>
+    <section class="productos" id="productos">
+        <h2>PRODUCTOS</h2>
+        <!--espacio para selector con javascript-->
+        <div class="selectores">
+        <select name="modelo" id="modelo">
+            <option value="kiesel" name="kiesel">kiesel</option>
+        </select>
+        <select name="color" id="color">
+            <option value="blue" name="blue">blue</option>
+        </select>
+        </div>
+        <article class="card card-1">
+            <div class="img">
+            <img src="img/img-1.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+            <h2>vader</h2>
+            <p>$1500</p>
+            <p>blue</p>
+            <p>6 cuerdas</p>
+            <button>BUY</button>
+            </div>
+        </article>
+        <article class="card card-2">
+            <div class="img">
+            <img src="img/img-2.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>type-x</h2>
+                <p>$1600</p>
+                <p>green</p>
+                <p>6 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-3">
+            <div class="img">
+            <img src="img/img-3.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>vader</h2>
+                <p>$1400</p>
+                <p>black</p>
+                <p>7 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-4">
+            <div class="img">
+            <img src="img/img-4.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>type-v</h2>
+                <p>$1700</p>
+                <p>white</p>
+                <p>8 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-5">
+            <div class="img">
+            <img src="img/img-a.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>Vader B</h2>
+                <p>$1700</p>
+                <p>green</p>
+                <p>4 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-6">
+            <div class="img">
+            <img src="img/img-b.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>wood</h2>
+                <p>$1500</p>
+                <p>mate</p>
+                <p>6 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-7">
+            <div class="img">
+            <img src="img/img-c.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>zeus</h2>
+                <p>$1900</p>
+                <p>purple</p>
+                <p>7 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+        <article class="card card-8">
+            <div class="img">
+            <img src="img/img-d.png" alt="guitarra">
+            </div>
+            <div class="especificaciones">
+                <h2>thanos</h2>
+                <p>$1400</p>
+                <p>red</p>
+                <p>5 cuerdas</p>
+                <button>BUY</button>
+                </div>
+        </article>
+    </section>
+    <section class="contacto" id="contactos">
+        <h2>
+            CONTACTO
+        </h2>
+        <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Cristian Chazarreta">
+        <label for="correo">Correo</label>
+        <input type="text" name="correo" id="correo" placeholder="example@gmail.com">
+        <label for="textarea">Comuniquenos</label>
+        <textarea name="mensaje" id="textarea" placeholder="Escriba aqui sus sugerencias" ></textarea>
+        <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </section>
+</main>
+<footer id="informacion">
+    <section class="informacion">
+        <h2>INFORMACION</h2>
+        <article class="autor">
+            <img src="img/chaza.jpg" alt="autor">
+            <p>Hola soy cristian chazarreta y esta pagina esta creada para llevar a la practica lo aprendido en javascript a medida que pase el tiempo ire agregando mas contenido para que puedan divertirse.</p>
+        </article>
+    </section>
+    <section class="yo">
+        <h3>TAIKO</h3>
+        <ul>
+            <li><a class="instagram" href="https://www.instagram.com/cristian.chaza/" target="_blank">instagram</a></li>
+            <li><a class="facebook" href="https://www.facebook.com/cristian.chaza.5" target="_blank">facebook</a></li>
+            <li><a class="linkedin" href="https://www.linkedin.com/in/cristian-chazarreta-579040211/" target="_blank">linkedin</a></li>
+        </ul>
+    </section>
+    <section class="email-footer">
+        <p>cristianchazarreta2021@gmail.com</p>
+    </section>
+</footer>
+<script>
+
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

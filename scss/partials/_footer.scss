@@ -1,0 +1,46 @@
+footer{
+    width: 90%;
+    margin: 20px auto;
+    .yo{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(192, 192, 192, 0.518);
+        padding: 10px 0px;
+        h3{
+            width: 50px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            li{
+                padding-left:20px;
+                .instagram{
+                    color: $color-2;
+                    text-decoration: none;
+                    &:hover{
+                        border-bottom: 2px solid rgba(236, 21, 228, 0.854);
+                    }
+                }
+                .facebook{
+                    color: $color-2;
+                    text-decoration: none;
+                    &:hover{
+                        border-bottom: 2px solid rgba(21, 39, 236, 0.854);
+                    }
+                }
+                .linkedin{
+                    color: $color-2;
+                    text-decoration: none;
+                    &:hover{
+                        border-bottom: 2px solid rgba(42, 132, 228, 0.854);
+                    }
+                }
+            }
+        }
+    }
+    .email-footer{
+        text-align: center;
+        font-size: 15px;
+    }
+}

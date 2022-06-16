@@ -1,0 +1,130 @@
+@import "../variables/variables";
+.productos{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 10px;
+    width: 90%;
+    margin:50px auto ;
+    h2{
+        font-size:1.5em;
+    }
+    .selectores{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin: 50px auto;
+        select{
+            width: 100px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.342)
+            ;
+            color: $color-2;
+            border:1px solid silver;
+            border-radius: 5px;
+        }
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        background-color: rgba(97, 89, 89, 0.4);
+        margin: 0px auto;
+        display: flex;
+        flex-direction: row;
+        border: $borde-2;
+        border-radius: 5px;
+        .img{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 90%;
+                &:hover{
+                    transform: translateX(20px) rotate(20deg);
+                    transition: 800ms;
+                }
+            }
+        }
+        .especificaciones{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            color: $color-2;
+            width: 50%;
+            button{
+                width: 80px;
+                height: 30px;
+                background: rgba(0, 0, 0, 0.82);
+                font-weight: bold;
+                color: $color;
+                border: 1px solid silver;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgba(4, 215, 14, 0.76);
+                    color:$color-2;
+                    transition: 800ms;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px){
+    .productos{
+        grid-template-areas:
+        "h2 h2 h2"
+        "selector card-1 card-2"
+        ". card-3 card-4"
+        ". card-5 card-6"
+        ". card-7 card-8"
+        ;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 50px repeat(4, 1fr);
+        h2{
+            font-size: 2em;
+            grid-area: h2;
+        }
+        .selectores{
+            grid-area: selector;
+            flex-direction: column;
+        }
+        .card-1{
+            grid-area: card-1;
+        }
+        .card-2{
+            grid-area: card-2;
+        }
+        .card-3{
+            grid-area: card-3;
+        }
+        .card-4{
+            grid-area:card-4;
+        }
+        .card-5{
+            grid-area: card-5;
+        }
+        .card-6{
+            grid-area: card-6;
+        }
+        .card-7{
+            grid-area: card-7;
+        }
+        .card-8{
+            grid-area: card-8;
+        }
+    }
+}
+
+@media (min-width:1024px){
+    .productos{
+        grid-template-areas:
+        "h2 h2 h2"
+        "selector card-1 card-2"
+        "card-3 card-4 card-5"
+        "card-6 card-7 card-8"
+        ;
+        grid-template-rows: 50px repeat(3, 1fr);
+    }
+}

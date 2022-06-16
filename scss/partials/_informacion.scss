@@ -1,0 +1,38 @@
+footer{
+    .informacion{
+        h2{
+            font-size:2em;
+        }
+        .autor{
+            display: flex;
+            flex-direction: column;
+        img{
+            width: 100%;
+            margin: 30px auto;
+        }
+        p{  
+            margin: 50px auto;
+            font-size: 20px;
+        }
+    }
+    }
+}
+
+@media (min-width:768px){
+    footer{
+        .informacion{
+            .autor{
+                flex-direction: row;
+                img{
+                    width: 50%;
+                }
+                p{  
+                    margin: 50px auto;
+                    padding: 20px;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}
