@@ -70,8 +70,9 @@ body {
   font-family: "rubik"; }
 
 .productos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
   width: 90%;
   margin: 50px auto; }
   .productos div {

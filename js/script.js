@@ -1,6 +1,7 @@
 //OBJETOS PARA LAS CARDS
 class Instrumento{
-    constructor(imagen,tipo,modelo,cuerdas,color,precio){
+    constructor(clase,imagen,tipo,modelo,cuerdas,color,precio){
+        this.clase=clase
         this.imagen=imagen
         this.tipo=tipo
         this.modelo=modelo
@@ -10,20 +11,20 @@ class Instrumento{
     }
 }
 const instrumentos = []
-instrumentos.push(new Instrumento("img/img-1","GUITARRA","McRocklin",6,"AZUL",1500))
-instrumentos.push(new Instrumento("img/img-2","GUITARRA","TYPE-X",6,"ARCOIRIS",1500))
-instrumentos.push(new Instrumento("img/img-3","GUITARRA","VADER",7,"NEGRO",1500))
-instrumentos.push(new Instrumento("img/img-4","GUITARRA","TYPE-V",8,"BLANCO",1500))
-instrumentos.push(new Instrumento("img/img-5","BAJO","VADER B",4,"VERDE",1500))
-instrumentos.push(new Instrumento("img/img-6","BAJO","WOOD",6,"MATE",1500))
-instrumentos.push(new Instrumento("img/img-7","BAJO","ZEUS",7,"VIOLETA",1500))
-instrumentos.push(new Instrumento("img/img-8","BAJO","THANOS",5,"ROJO",1500))
+instrumentos.push(new Instrumento("card-1","img/img-1.png","GUITARRA","McRocklin",6,"AZUL",1500))
+instrumentos.push(new Instrumento("card-2","img/img-2.png","GUITARRA","TYPE-X",6,"ARCOIRIS",1500))
+instrumentos.push(new Instrumento("card-3","img/img-3.png","GUITARRA","VADER",7,"NEGRO",1500))
+instrumentos.push(new Instrumento("card-4","img/img-4.png","GUITARRA","TYPE-V",8,"BLANCO",1500))
+instrumentos.push(new Instrumento("card-5","img/img-a.png","BAJO","VADER B",4,"VERDE",1500))
+instrumentos.push(new Instrumento("card-6","img/img-b.png","BAJO","WOOD",6,"MATE",1500))
+instrumentos.push(new Instrumento("card-7","img/img-c.png","BAJO","ZEUS",7,"VIOLETA",1500))
+instrumentos.push(new Instrumento("card-8","img/img-d.png","BAJO","THANOS",5,"ROJO",1500))
 
 const productos = document.getElementById("prod")
 
 for(const producto of instrumentos){
     productos.innerHTML += `
-    <article class="card">
+    <article class="card ${producto.clase}">
             <div class="img">
             <img src="${producto.imagen}" alt="guitarra">
             </div>
