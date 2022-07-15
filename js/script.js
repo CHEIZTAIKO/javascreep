@@ -15,10 +15,10 @@ instrumentos.push(new Instrumento("card-1","img/img-1.png","GUITARRA","McRocklin
 instrumentos.push(new Instrumento("card-2","img/img-2.png","GUITARRA","TYPE-X",6,"ARCOIRIS",1500))
 instrumentos.push(new Instrumento("card-3","img/img-3.png","GUITARRA","VADER",7,"NEGRO",1500))
 instrumentos.push(new Instrumento("card-4","img/img-4.png","GUITARRA","TYPE-V",8,"BLANCO",1500))
-instrumentos.push(new Instrumento("card-5","img/img-a.png","BAJO","VADER B",4,"VERDE",1500))
-instrumentos.push(new Instrumento("card-6","img/img-b.png","BAJO","WOOD",6,"MATE",1500))
-instrumentos.push(new Instrumento("card-7","img/img-c.png","BAJO","ZEUS",7,"VIOLETA",1500))
-instrumentos.push(new Instrumento("card-8","img/img-d.png","BAJO","THANOS",5,"ROJO",1500))
+instrumentos.push(new Instrumento("card-a","img/img-a.png","BAJO","VADER B",4,"VERDE",1500))
+instrumentos.push(new Instrumento("card-b","img/img-b.png","BAJO","WOOD",6,"MATE",1500))
+instrumentos.push(new Instrumento("card-c","img/img-c.png","BAJO","ZEUS",7,"VIOLETA",1500))
+instrumentos.push(new Instrumento("card-d","img/img-d.png","BAJO","THANOS",5,"ROJO",1500))
 
 const productos = document.getElementById("prod")
 
