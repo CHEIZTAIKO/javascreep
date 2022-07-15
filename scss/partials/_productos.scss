@@ -1,27 +1,11 @@
 @import "../variables/variables";
 .productos{
-    display: grid;
-    grid-template-columns: 1;
-    gap: 10px;
+    display:flex;
+    flex-wrap: wrap;
     width: 90%;
     margin:50px auto ;
     h2{
         font-size:1.5em;
-    }
-    .selectores{
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-        margin: 50px auto;
-        select{
-            width: 100px;
-            height: 40px;
-            background-color: rgba(0, 0, 0, 0.342)
-            ;
-            color: $color-2;
-            border:1px solid silver;
-            border-radius: 5px;
-        }
     }
     .card{
         width: 300px;
@@ -68,63 +52,5 @@
                 }
             }
         }
-    }
-}
-
-@media (min-width:768px){
-    .productos{
-        grid-template-areas:
-        "h2 h2 h2"
-        "selector card-1 card-2"
-        ". card-3 card-4"
-        ". card-5 card-6"
-        ". card-7 card-8"
-        ;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 50px repeat(4, 1fr);
-        h2{
-            font-size: 2em;
-            grid-area: h2;
-        }
-        .selectores{
-            grid-area: selector;
-            flex-direction: column;
-        }
-        .card-1{
-            grid-area: card-1;
-        }
-        .card-2{
-            grid-area: card-2;
-        }
-        .card-3{
-            grid-area: card-3;
-        }
-        .card-4{
-            grid-area:card-4;
-        }
-        .card-5{
-            grid-area: card-5;
-        }
-        .card-6{
-            grid-area: card-6;
-        }
-        .card-7{
-            grid-area: card-7;
-        }
-        .card-8{
-            grid-area: card-8;
-        }
-    }
-}
-
-@media (min-width:1024px){
-    .productos{
-        grid-template-areas:
-        "h2 h2 h2"
-        "selector card-1 card-2"
-        "card-3 card-4 card-5"
-        "card-6 card-7 card-8"
-        ;
-        grid-template-rows: 50px repeat(3, 1fr);
     }
 }
