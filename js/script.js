@@ -15,4 +15,5 @@ form.addEventListener("submit",(evento)=>{
     const usuario = new Usuarios(nombre,correo,textArea)
     user.push(usuario)
     console.log(user)
+    form.reset()
 })
