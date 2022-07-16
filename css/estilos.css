@@ -67,6 +67,12 @@ body {
   color: black;
   font-family: "rubik"; }
 
+.tituloProductos {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-area: "titulo ." "select-1 select-2" "select-3 select-4"; }
+
 .productos {
   display: grid;
   grid-template-columns: 1fr;
@@ -120,7 +126,7 @@ body {
   .productos {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "titulo titulo" "card-1 card-2" "card-3 card-4" "card-a card-b" "card-c card-d"; }
+    grid-template-areas: "card-1 card-2" "card-3 card-4" "card-a card-b" "card-c card-d"; }
   h2 {
     grid-area: titulo; }
   .card-1 {
@@ -142,7 +148,7 @@ body {
 
 @media (min-width: 1024px) {
   .productos {
-    grid-template-areas: "titulo titulo titulo" "card-1 card-2 card-3" "card-4 card-a card-b" "card-c card-d ."; } }
+    grid-template-areas: "card-1 card-2 card-3" "card-4 card-a card-b" "card-c card-d ."; } }
 
 .vendidos h2 {
   font-size: 1.5em;
