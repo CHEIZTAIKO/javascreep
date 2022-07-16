@@ -31,7 +31,7 @@ for(const producto of instrumentos){
             <div class="especificaciones">
                 <h2>${producto.tipo}</h2>
                 <p>${producto.modelo}</p>
-                <p>${producto.cuerdas}}</p>
+                <p>${producto.cuerdas} cuerdas</p>
                 <p>${producto.color}</p>
                 <p>$${producto.precio}</p>
                 <button type="submit">BUY</button>
@@ -39,9 +39,6 @@ for(const producto of instrumentos){
         </article>
     `
 }
-
-
-
 
 //FORMULARIO
 class Usuarios{
@@ -63,3 +60,4 @@ form.addEventListener("submit",(evento)=>{
     console.log(user)
     form.reset()
 })
+
