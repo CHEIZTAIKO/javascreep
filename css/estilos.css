@@ -67,12 +67,6 @@ body {
   color: black;
   font-family: "rubik"; }
 
-.tituloProductos {
-  width: 90%;
-  margin: 50px auto;
-  display: grid;
-  grid-area: "titulo ." "select-1 select-2" "select-3 select-4"; }
-
 .productos {
   display: grid;
   grid-template-columns: 1fr;
@@ -275,3 +269,13 @@ footer .informacion .autor {
       margin: 50px auto;
       padding: 20px;
       text-align: center; } }
+
+.tituloProductos {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 10px auto; }
+  .tituloProductos .selectores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }

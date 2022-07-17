@@ -1,13 +1,4 @@
 @import "../variables/variables";
-.tituloProductos{
-    width: 90%;
-    margin:50px auto ;
-    display:grid;
-    grid-area: "titulo ."
-                "select-1 select-2"
-                "select-3 select-4"
-    ;
-}
 .productos{
     display:grid;
     grid-template-columns: 1fr;
