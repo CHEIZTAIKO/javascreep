@@ -62,3 +62,14 @@ form.addEventListener("submit",(evento)=>{
     form.reset()
 })
 
+//informacion de el autor, cuando el mouse se encima a la imagen y cuando se saca deja de existir la informacion
+const autor = document.getElementById("autor")
+autor.addEventListener("mouseenter",()=>{
+    const parrafo = document.createElement("p")
+    parrafo.innerHTML += `Buenas mi nombre es Chazarreta Cristian Gabriel y este sitio web esta hecho con el fin de incorporar varios eventos de js donde el usuario pueda interactuar, a medida que aprenda 
+    cosas nuevas ire agregandolas, espero que tengan un buen codigo y disfruten.`
+    autor.append(parrafo)
+    autor.addEventListener("mouseleave",()=>{
+        parrafo.remove()
+    })
+})
