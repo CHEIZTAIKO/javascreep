@@ -254,7 +254,8 @@ footer .informacion .autor {
   display: flex;
   flex-direction: column; }
   footer .informacion .autor img {
-    width: 100%;
+    width: 70%;
+    height: 70%;
     margin: 30px auto; }
   footer .informacion .autor p {
     margin: 50px auto;
@@ -264,7 +265,8 @@ footer .informacion .autor {
   footer .informacion .autor {
     flex-direction: row; }
     footer .informacion .autor img {
-      width: 50%; }
+      width: 30%;
+      height: 40%; }
     footer .informacion .autor p {
       margin: 50px auto;
       padding: 20px;

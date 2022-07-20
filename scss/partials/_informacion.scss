@@ -7,7 +7,8 @@ footer{
             display: flex;
             flex-direction: column;
         img{
-            width: 100%;
+            width: 70%;
+            height: 70%;
             margin: 30px auto;
         }
         p{  
@@ -24,7 +25,8 @@ footer{
             .autor{
                 flex-direction: row;
                 img{
-                    width: 50%;
+                    width: 30%;
+                    height: 40%;
                 }
                 p{  
                     margin: 50px auto;
