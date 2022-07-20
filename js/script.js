@@ -59,7 +59,7 @@ form.addEventListener("submit",(evento)=>{
     let textArea = document.getElementById("textArea").value
     const usuario = new Usuarios(nombre,correo,textArea)
     user.push(usuario)
-    console.log(user)
+    console.log(usuario)
     form.reset()
 })
 
