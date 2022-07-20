@@ -1,5 +1,6 @@
 
-//objetos para las cards
+//objetos para las cards, los objetos son estaticos, el unico cambio de posicion se lo doy mediante una grilla creada con css
+
 class Instrumento{
     constructor(clase,imagen,tipo,modelo,cuerdas,color,precio){
         this.clase=clase
@@ -41,7 +42,7 @@ for(const producto of instrumentos){
     `
 }
 
-//FORMULARIO
+//FORMULARIO que guarda un usuario con su consulta, mas adelante agregare que la consulta se deribe a un email creado especialmente para ello.
 class Usuarios{
     constructor(nombre,correo,textArea){
         this.nombre=nombre
