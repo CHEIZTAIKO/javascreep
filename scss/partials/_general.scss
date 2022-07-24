@@ -3,8 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+*::before,*::after{
+    box-sizing: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
     background:$color;
     color: $color-2;
     font-family: $fuente;
+    overflow-x:hidden ;
 }

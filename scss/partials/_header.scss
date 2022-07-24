@@ -1,41 +1,32 @@
 @import "../variables/variables";
 
 header{
-.logo{
-    //FLEX
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background:linear-gradient(rgba(72, 63, 233, 0.694),rgba(0,0,0,0));
-h1{ 
-    height: 70px;
+    position:sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: rgb(207, 202, 202);
+    .cabecera{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    h1{ 
     font-size: $titulo;
-    background:linear-gradient(30deg rgba(0, 0, 0, 0.9));
     position: relative;
-    top: 10px;
-}
-img{
-    height: 70px;
+    padding: 13px;
+    }
 }
 }
+.panel{
 nav{
-    margin: 50px 20px;
     ul{
     //NORMALICE
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
     list-style-type: $nada;
     font-size: 1.2em;
         li{
-            gap:10px;
             //FLEX
-            display: flex;
+            display: block;
             justify-content: center;
-            align-content: center;
             a{
             display: flex;
             justify-content: center;
@@ -43,13 +34,10 @@ nav{
             color:$color-2;
             text-decoration: none;
             height: 50px;
-            width: 150px;
-            border-radius: 5px;
             &:hover{
-                background-color: rgb(51, 155, 230);
-                color: $color-2;
+                background-color: rgb(0, 0, 0);
+                color: $color;
                 transition: all 500ms ease;
-                animation: shadow-pulse 800ms 1 ;
             }
         }
     }
