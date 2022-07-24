@@ -1,6 +1,4 @@
-
 //objetos para las cards, los objetos son estaticos, el unico cambio de posicion se lo doy mediante una grilla creada con css
-
 class Instrumento{
     constructor(clase,imagen,tipo,modelo,cuerdas,color,precio){
         this.clase=clase
