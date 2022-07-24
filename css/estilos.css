@@ -1,7 +1,7 @@
 header {
   position: sticky;
   top: 0;
-  padding: 1rem;
+  padding: 0.3rem;
   background-color: #cfcaca; }
   header .cabecera {
     display: flex;
@@ -12,24 +12,38 @@ header {
       position: relative;
       padding: 13px; }
 
-.panel nav ul {
-  padding: 0;
-  list-style-type: none;
-  font-size: 1.2em; }
-  .panel nav ul li {
-    display: block;
-    justify-content: center; }
-    .panel nav ul li a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: black;
-      text-decoration: none;
-      height: 50px; }
-      .panel nav ul li a:hover {
-        background-color: black;
-        color: #d8d8d8;
-        transition: all 500ms ease; }
+.panel {
+  position: fixed;
+  z-index: 995;
+  top: 4.5rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+  .panel .menu {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center; }
+    .panel .menu ul {
+      padding: 0;
+      list-style-type: none;
+      font-size: 1.2em;
+      width: 100%; }
+      .panel .menu ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 1.5rem;
+        padding: 10px;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.808);
+        color: #d8d8d8; }
+        .panel .menu ul li a:hover {
+          background-color: white;
+          color: black;
+          transition: all 500ms ease; }
 
 @keyframes shadow-pulse {
   0% {
