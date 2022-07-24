@@ -24,6 +24,8 @@ header{
     left: 0;
     right: 0;
     width: 100%;
+    transition: transform 0.3s ease;
+    transform: translate(-100%,0);
 .menu{
     width: inherit;
     display: flex;
