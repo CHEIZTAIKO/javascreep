@@ -40,7 +40,7 @@ for(const producto of instrumentos){
     `
 }
 
-//FORMULARIO que guarda un usuario con su consulta, mas adelante agregare que la consulta se deribe a un email creado especialmente para ello.
+//FORMULARIO que guarda un usuario con su consulta en el localStorage y devuelve un parrafo agradeciendo la consulta con los datos ingresados
 class Usuarios{
     constructor(nombre,correo,textArea){
         this.nombre=nombre
@@ -74,8 +74,8 @@ autor.addEventListener("mouseenter",()=>{
     const parrafo = document.createElement("p")
     parrafo.innerHTML += `Buenas mi nombre es Chazarreta Cristian Gabriel y este sitio web esta hecho con el fin de incorporar varios eventos de js donde el usuario pueda interactuar, a medida que aprenda 
     cosas nuevas ire agregandolas, espero que tengan un buen codigo y disfruten.`
-    
     autor.append(parrafo)
+    
     autor.addEventListener("mouseleave",()=>{
         parrafo.remove()
     })
