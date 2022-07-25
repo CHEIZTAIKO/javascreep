@@ -58,8 +58,15 @@ form.addEventListener("submit",(evento)=>{
     const usuario = new Usuarios(nombre,correo,textArea)
     user.push(usuario)
     localStorage.setItem("Usuario", JSON.stringify(user))
-    form.reset()
+    form.reset();
+    const cartel = document.getElementById("contactos");
+    const info = JSON.parse(localStorage.getItem("Usuario"));
+    info.forEach(user =>{
+        cartel.innerHTML += `<p>Gracias por contactarse con nosotros ${user.nombre}
+        a la brevedad le enviaremos un correo a ${user.correo}</p>`
+    })
 })
+
 
 //informacion de el autor, cuando el mouse se encima a la imagen y cuando se saca deja de existir la informacion
 const autor = document.getElementById("autor")
