@@ -57,7 +57,7 @@ form.addEventListener("submit",(evento)=>{
     let textArea = document.getElementById("textArea").value
     const usuario = new Usuarios(nombre,correo,textArea)
     user.push(usuario)
-    console.log(usuario)
+    localStorage.setItem("Usuario", JSON.stringify(user))
     form.reset()
 })
 
