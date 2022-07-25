@@ -57,11 +57,11 @@ form.addEventListener("submit",(evento)=>{
     let textArea = document.getElementById("textArea").value
     const usuario = new Usuarios(nombre,correo,textArea)
     user.push(usuario)
-    localStorage.setItem("Usuario", JSON.stringify(user))
     form.reset();
+    localStorage.setItem("Usuario", JSON.stringify(user))
     const cartel = document.getElementById("contactos");
-    const info = JSON.parse(localStorage.getItem("Usuario"));
-    info.forEach(user =>{
+    const dato = JSON.parse(localStorage.getItem("Usuario"));
+    dato.forEach(user =>{
         cartel.innerHTML += `<p>Gracias por contactarse con nosotros ${user.nombre}
         a la brevedad le enviaremos un correo a ${user.correo}</p>`
     })
