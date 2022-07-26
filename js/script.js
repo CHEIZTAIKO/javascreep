@@ -34,7 +34,7 @@ const instrumentos = [
 ]
 let contenedorCarrito = document.getElementById("carrito")
 
-let carrito; 
+let carrito=[]; 
 function carroEnStorage(){
     let contenidoStorage =JSON.parse(localStorage.getItem("carritoEnStorage"))
     if(contenidoStorage){
@@ -53,7 +53,6 @@ function carroEnStorage(){
 function imprimirProdEnHTML(array){
     let productos = document.getElementById("prod")
     productos.innerHTML = "";
-
     for(const producto of array){
         let div = document.createElement("div")
         div.classList.add("producto");
@@ -77,7 +76,7 @@ function imprimirProdEnHTML(array){
 }
 
 function agregarAlCarrito(idProducto){
-    let instrumentoEnCarrito = carrito.find((elemento)=>elemento.id === idProducto);
+    let instrumentoEnCarrito = carrito.find(element => element.id === idProducto);
     if(instrumentoEnCarrito){
         let index = carrito.findIndex((elemento)=> elemento.id === instrumentoEnCarrito.id);
         carrito[index].agregarUnidad();
@@ -91,7 +90,7 @@ function agregarAlCarrito(idProducto){
 
 function eliminarDelCarrito(id){
     let instrumento = carrito.find((instrumento)=>instrumento.id === id);
-    let index = carrito.findIndex((elemento)=>elemento.id === instrumento.id);
+    let index = carrito.findIndex(element=>element.id === instrumento.id);
     if(instrumento.cantidad>1){
         carrito[index].quitarUnidad();
         carrito[index].actualizarPrecioTotal();
@@ -138,7 +137,7 @@ function imprimirTabla(array){
     for(let instrumentos of array){
         let datos = document.createElement("div")
         datos.innerHTML = `
-                <td>${instrumentos.marca}</td>
+                <td>${instrumentos.modelo}</td>
                 <td>${instrumentos.cantidad}</td>
                 <td>$${instrumentos.precioTotal}</td>
                 <td><button id="eliminar${instrumentos.id}">Eliminar</button></td>`;
