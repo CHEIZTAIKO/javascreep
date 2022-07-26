@@ -23,14 +23,14 @@ class Instrumento{
 }
 //objetos para las cards, los objetos son estaticos, el unico cambio de posicion se lo doy mediante una grilla creada con css
 const instrumentos = [
-    {id:1,imagen:"img/img-1.png",tipo:"GUITARRA",modelo:"McRocklin",cuerdas:6,color:"AZUL",precio:1700},
-    {id:2,imagen:"img/img-2.png",tipo:"GUITARRA",modelo:"TYPE-X",cuerdas:6,color:"ARCOIRIS",precio:1600},
-    {id:3,imagen:"img/img-3.png",tipo:"GUITARRA",modelo:"VADER",cuerdas:7,color:"NEGRO",precio:1600},
-    {id:4,imagen:"img/img-4.png",tipo:"GUITARRA",modelo:"TYPE-V",cuerdas:8,color:"BLANCO",precio:1400},
-    {id:5,imagen:"img/img-a.png",tipo:"BAJO",modelo:"VADER B",cuerdas:4,color:"VERDE",precio:1800},
-    {id:6,imagen:"img/img-b.png",tipo:"BAJO",modelo:"WOOD",cuerdas:6,color:"MATE",precio:1700},
-    {id:7,imagen:"img/img-c.png",tipo:"BAJO",modelo:"ZEUS",cuerdas:7,color:"VIOLETA",precio:1900},
-    {id:8,imagen:"img/img-d.png",tipo:"BAJO",modelo:"THANOS",cuerdas:5,color:"ROJO",precio:1500},
+    {id:0,imagen:"img/img-1.png",tipo:"GUITARRA",modelo:"McRocklin",cuerdas:6,color:"AZUL",precio:1700},
+    {id:1,imagen:"img/img-2.png",tipo:"GUITARRA",modelo:"TYPE-X",cuerdas:6,color:"ARCOIRIS",precio:1600},
+    {id:2,imagen:"img/img-3.png",tipo:"GUITARRA",modelo:"VADER",cuerdas:7,color:"NEGRO",precio:1600},
+    {id:3,imagen:"img/img-4.png",tipo:"GUITARRA",modelo:"TYPE-V",cuerdas:8,color:"BLANCO",precio:1400},
+    {id:4,imagen:"img/img-a.png",tipo:"BAJO",modelo:"VADER B",cuerdas:4,color:"VERDE",precio:1800},
+    {id:5,imagen:"img/img-b.png",tipo:"BAJO",modelo:"WOOD",cuerdas:6,color:"MATE",precio:1700},
+    {id:6,imagen:"img/img-c.png",tipo:"BAJO",modelo:"ZEUS",cuerdas:7,color:"VIOLETA",precio:1900},
+    {id:7,imagen:"img/img-d.png",tipo:"BAJO",modelo:"THANOS",cuerdas:5,color:"ROJO",precio:1500},
 ]
 let contenedorCarrito = document.getElementById("carrito")
 
