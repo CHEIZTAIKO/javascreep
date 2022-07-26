@@ -32,11 +32,11 @@ const instrumentos = [
     {id:7,imagen:"img/img-c.png",tipo:"BAJO",modelo:"ZEUS",cuerdas:7,color:"VIOLETA",precio:1900},
     {id:8,imagen:"img/img-d.png",tipo:"BAJO",modelo:"THANOS",cuerdas:5,color:"ROJO",precio:1500},
 ]
-const contenedorCarrito = document.getElementById("carrito")
+let contenedorCarrito = document.getElementById("carrito")
 
 let carrito; 
 function carroEnStorage(){
-    let contenidoStorage =JSON.parse(localStorage.getItem("carritoStorage"))
+    let contenidoStorage =JSON.parse(localStorage.getItem("carritoEnStorage"))
     if(contenidoStorage){
         let array=[]
         for(const objeto of contenidoStorage){
@@ -72,9 +72,7 @@ function imprimirProdEnHTML(array){
         `;
         productos.appendChild(div);
         let boton = document.getElementById(`agregar${producto.id}`);
-        boton.addEventListener("click", () => {
-            agregarAlCarrito(producto.id)
-        });
+        boton.addEventListener("click", () => agregarAlCarrito(producto.id));
     }
 }
 
@@ -101,13 +99,13 @@ function eliminarDelCarrito(id){
         carrito.splice(index,1)
     }
     swal("producto eliminado","","success")
-    localStorage.setItem("carritoStorage",JSON.stringify(carrito));
+    localStorage.setItem("carritoEnStorage",JSON.stringify(carrito));
     imprimirTabla(carrito);
 }
 
 function eliminarCarrito(){
     carrito = [];
-    localStorage.removeItem("carritoStorage");
+    localStorage.removeItem("carritoEnStorage");
     document.getElementById("carrito").innerHTML = "";
     document.getElementById("acciones-carrito").innerHTML = "";
 }
@@ -121,7 +119,7 @@ function imprimirTabla(array){
     contenedor.innerHTML = "";
     let tabla = document.createElement("div")
     tabla.innerHTML = `
-    <table id="tablaCarrito" class="table table-striped">
+    <table id="tablaCarrito" class="tabla">
             <thead>         
                 <tr>
                     <th>Item</th>
