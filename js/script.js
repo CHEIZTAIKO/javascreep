@@ -1,30 +1,24 @@
 //objetos para las cards, los objetos son estaticos, el unico cambio de posicion se lo doy mediante una grilla creada con css
-class Instrumento{
-    constructor(clase,imagen,tipo,modelo,cuerdas,color,precio){
-        this.clase=clase
-        this.imagen=imagen
-        this.tipo=tipo
-        this.modelo=modelo
-        this.cuerdas=cuerdas
-        this.color=color
-        this.precio=precio
-    }
-}
-const instrumentos = []
-instrumentos.push(new Instrumento("card-1","img/img-1.png","GUITARRA","McRocklin",6,"AZUL",1700))
-instrumentos.push(new Instrumento("card-2","img/img-2.png","GUITARRA","TYPE-X",6,"ARCOIRIS",1800))
-instrumentos.push(new Instrumento("card-3","img/img-3.png","GUITARRA","VADER",7,"NEGRO",1600))
-instrumentos.push(new Instrumento("card-4","img/img-4.png","GUITARRA","TYPE-V",8,"BLANCO",1400))
-instrumentos.push(new Instrumento("card-a","img/img-a.png","BAJO","VADER B",4,"VERDE",1800))
-instrumentos.push(new Instrumento("card-b","img/img-b.png","BAJO","WOOD",6,"MATE",1700))
-instrumentos.push(new Instrumento("card-c","img/img-c.png","BAJO","ZEUS",7,"VIOLETA",1900))
-instrumentos.push(new Instrumento("card-d","img/img-d.png","BAJO","THANOS",5,"ROJO",1500))
+const instrumentos = [
+    {id:1,imagen:"img/img-1.png",tipo:"GUITARRA",modelo:"McRocklin",cuerdas:6,color:"AZUL",precio:1700,cantidad:0},
+    {id:2,imagen:"img/img-2.png",tipo:"GUITARRA",modelo:"TYPE-X",cuerdas:6,color:"ARCOIRIS",precio:1600,cantidad:0},
+    {id:3,imagen:"img/img-3.png",tipo:"GUITARRA",modelo:"VADER",cuerdas:7,color:"NEGRO",precio:1600,cantidad:0},
+    {id:4,imagen:"img/img-4.png",tipo:"GUITARRA",modelo:"TYPE-V",cuerdas:8,color:"BLANCO",precio:1400,cantidad:0},
+    {id:5,imagen:"img/img-a.png",tipo:"BAJO",modelo:"VADER B",cuerdas:4,color:"VERDE",precio:1800,cantidad:0},
+    {id:6,imagen:"img/img-b.png",tipo:"BAJO",modelo:"WOOD",cuerdas:6,color:"MATE",precio:1700,cantidad:0},
+    {id:7,imagen:"img/img-c.png",tipo:"BAJO",modelo:"ZEUS",cuerdas:7,color:"VIOLETA",precio:1900,cantidad:0},
+    {id:8,imagen:"img/img-d.png",tipo:"BAJO",modelo:"THANOS",cuerdas:5,color:"ROJO",precio:1500,cantidad:0},
+]
 
 const productos = document.getElementById("prod")
+const contenedorCarrito = document.getElementById("carrito-contenedor")
 
-for(const producto of instrumentos){
-    productos.innerHTML += `
-    <article class="card ${producto.clase}">
+let carrito = []; 
+
+instrumentos.forEach((producto)=>{
+    const div = document.createElement("div")
+    div.classList.add("producto");
+    div.innerHTML += `
             <div class="img">
             <img src="${producto.imagen}" alt="guitarra">
             </div>
@@ -33,13 +27,34 @@ for(const producto of instrumentos){
                 <p>${producto.modelo}</p>
                 <p>${producto.cuerdas} cuerdas</p>
                 <p>${producto.color}</p>
-                <p>$${producto.precio}</p>
-                <button type="submit">BUY</button>
-                </div>
-        </article>
-    `
-}
+                <p class="precioProducto" >$${producto.precio}</p>
+                <button id="agregar${producto.id}" class="boton-agregar"> Comprar </button>                
+            </div>
+    `;
+    productos.appendChild(div);
+    const boton = document.getElementById(`agregar${producto.id}`);
+    boton.addEventListener("click", () => {
+        agregarAlCarrito(producto.id)
+    });
+})
 
+const agregarAlCarrito = (prodId) => {
+    const item = instrumentos.find((prod) => prod.id === prodId)
+    carrito.push(item)
+    actualizarCarrito()
+}
+const actualizarCarrito = () =>{
+    contenedorCarrito.innerHTML = "";
+    carrito.forEach((prod)=>{
+        const div = document.createElement("div")
+        div.className = ("productoEnCarrito")
+        div.innerHTML = `<p>${prod.tipo} ${prod.modelo}</p>
+        <p>Precio: $${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito" class="boton-eliminar"><i class="fas fa-trash-alt"</button>`
+        contenedorCarrito.appendChild(div)
+    })
+}
 //FORMULARIO que guarda un usuario con su consulta en el localStorage y devuelve un parrafo agradeciendo la consulta con los datos ingresados
 class Usuarios{
     constructor(nombre,correo,textArea){

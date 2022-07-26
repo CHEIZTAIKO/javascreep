@@ -25,16 +25,12 @@ body {
   font-family: "rubik"; }
 
 .productos {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   width: 90%;
   margin: 50px auto;
   align-content: center; }
-  .productos h2 {
-    font-size: 1.5em;
-    text-align: left; }
-  .productos .card {
+  .productos .producto {
     width: 300px;
     height: 300px;
     background-color: rgba(97, 89, 89, 0.4);
@@ -42,24 +38,24 @@ body {
     margin: 10px auto;
     border: 1px solid silver;
     border-radius: 5px; }
-    .productos .card .img {
+    .productos .producto .img {
       width: 50%;
       display: flex;
       justify-content: center;
       align-items: center; }
-      .productos .card .img img {
+      .productos .producto .img img {
         height: 90%; }
-        .productos .card .img img:hover {
+        .productos .producto .img img:hover {
           transform: translateX(20px) rotate(20deg);
           transition: 800ms; }
-    .productos .card .especificaciones {
+    .productos .producto .especificaciones {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
       color: black;
       width: 50%; }
-      .productos .card .especificaciones button {
+      .productos .producto .especificaciones button {
         width: 80px;
         height: 30px;
         background: rgba(0, 0, 0, 0.82);
@@ -68,38 +64,10 @@ body {
         border: 1px solid silver;
         border-radius: 5px;
         cursor: pointer; }
-        .productos .card .especificaciones button:hover {
+        .productos .producto .especificaciones button:hover {
           background-color: rgba(4, 215, 14, 0.76);
           color: black;
           transition: 800ms; }
-
-@media (min-width: 768px) {
-  .productos {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "card-1 card-2" "card-3 card-4" "card-a card-b" "card-c card-d"; }
-  h2 {
-    grid-area: titulo; }
-  .card-1 {
-    grid-area: card-1; }
-  .card-2 {
-    grid-area: card-2; }
-  .card-3 {
-    grid-area: card-3; }
-  .card-4 {
-    grid-area: card-4; }
-  .card-a {
-    grid-area: card-a; }
-  .card-b {
-    grid-area: card-b; }
-  .card-c {
-    grid-area: card-c; }
-  .card-d {
-    grid-area: card-d; } }
-
-@media (min-width: 1024px) {
-  .productos {
-    grid-template-areas: "card-1 card-2 card-3" "card-4 card-a card-b" "card-c card-d ."; } }
 
 .vendidos h2 {
   font-size: 1.5em;

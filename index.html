@@ -14,15 +14,27 @@
     <h1>SCREEP</h1>
 </header>
 <main>
-    <section class="vendidos" id="vendidos">
-        <h2>+ VENDIDOS</h2>
-        <!--espacio para carrousel con javascript-->
-    </section>
     <section class="tituloProductos" id="tituloProductos">
         <h2>PRODUCTOS</h2>
     </section>
     <section class="productos" id="prod">
     </section>
+    <div id="carrito"></div>
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
     <section class="contacto" id="contactos">
         <h2>
             CONTACTO
