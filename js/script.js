@@ -1,3 +1,4 @@
+
 //objetos para las cards, los objetos son estaticos, el unico cambio de posicion se lo doy mediante una grilla creada con css
 const instrumentos = [
     {id:1,imagen:"img/img-1.png",tipo:"GUITARRA",modelo:"McRocklin",cuerdas:6,color:"AZUL",precio:1700,cantidad:0},
@@ -11,7 +12,7 @@ const instrumentos = [
 ]
 
 const productos = document.getElementById("prod")
-const contenedorCarrito = document.getElementById("carrito-contenedor")
+const contenedorCarrito = document.getElementById("carrito")
 
 let carrito = []; 
 
@@ -42,6 +43,7 @@ const agregarAlCarrito = (prodId) => {
     const item = instrumentos.find((prod) => prod.id === prodId)
     carrito.push(item)
     actualizarCarrito()
+    console.log(carrito)
 }
 const actualizarCarrito = () =>{
     contenedorCarrito.innerHTML = "";
@@ -54,6 +56,13 @@ const actualizarCarrito = () =>{
         <button onclick="eliminarDelCarrito" class="boton-eliminar"><i class="fas fa-trash-alt"</button>`
         contenedorCarrito.appendChild(div)
     })
+}
+const eliminarDelCarrito = (prodId)=>{
+    const item = carrito.find((prod)=>{
+        prod.id === prodId
+    })
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice,1)
 }
 //FORMULARIO que guarda un usuario con su consulta en el localStorage y devuelve un parrafo agradeciendo la consulta con los datos ingresados
 class Usuarios{

@@ -244,3 +244,7 @@ footer .informacion .autor {
       color: royalblue;
       border: none;
       background-color: white; }
+
+.modal-active {
+  opacity: 1;
+  visibility: visible; }
