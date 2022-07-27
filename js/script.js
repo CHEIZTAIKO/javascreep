@@ -1,13 +1,14 @@
 class Instrumento{
     constructor(inst,cantidad){
-        this.id=inst.id
-        this.imagen=inst.imagen
-        this.tipo=inst.tipo
-        this.modelo=inst.modelo
-        this.cuerdas=inst.cuerdas
-        this.color=inst.color
-        this.precioTotal=inst.precio
-        this.cantidad=cantidad
+        this.id=inst.id;
+        this.imagen=inst.imagen;
+        this.tipo=inst.tipo;
+        this.modelo=inst.modelo;
+        this.cuerdas=inst.cuerdas;
+        this.color=inst.color;
+        this.precio=inst.precio
+        this.precioTotal=inst.precio;
+        this.cantidad=cantidad;
     }
     agregarUnidad() {
         this.cantidad++;
@@ -32,7 +33,6 @@ const instrumentos = [
     {id:6,imagen:"img/img-c.png",tipo:"BAJO",modelo:"ZEUS",cuerdas:7,color:"VIOLETA",precio:1900},
     {id:7,imagen:"img/img-d.png",tipo:"BAJO",modelo:"THANOS",cuerdas:5,color:"ROJO",precio:1500},
 ]
-let contenedorCarrito = document.getElementById("carrito")
 
 let carrito=[]; 
 function carroEnStorage(){
@@ -56,7 +56,7 @@ function imprimirProdEnHTML(array){
     for(const producto of array){
         let div = document.createElement("div")
         div.classList.add("producto");
-        div.innerHTML += `
+        div.innerHTML = `
                 <div class="img">
                 <img src="${producto.imagen}" alt="guitarra">
                 </div>
@@ -65,7 +65,7 @@ function imprimirProdEnHTML(array){
                     <p>${producto.modelo}</p>
                     <p>${producto.cuerdas} cuerdas</p>
                     <p>${producto.color}</p>
-                    <p class="precioProducto" >$${producto.precio}</p>
+                    <p class="precioProducto" >${producto.precio}</p>
                     <button id="agregar${producto.id}" class="boton-agregar"> Comprar </button>                
                 </div>
         `;
@@ -108,6 +108,7 @@ function eliminarCarrito(){
     document.getElementById("carrito").innerHTML = "";
     document.getElementById("acciones-carrito").innerHTML = "";
 }
+
 function obtenerPrecioTotal(array) {
     return array.reduce((total, elemento) => total + elemento.precioTotal, 0);
 }
@@ -145,6 +146,11 @@ function imprimirTabla(array){
         let botonEliminar = document.getElementById(`eliminar${instru.id}`);
         botonEliminar.addEventListener("click", () => eliminarDelCarrito(instru.id));
     }
+    let accionesCarrito = document.getElementById("acciones-carrito");
+    accionesCarrito.innerHTML = `
+		<h5>PrecioTotal: $${precioTotal}</h5>
+		<button id="vaciarCarrito" onclick="eliminarCarrito()" class="vaciar-carrito" >Vaciar Carrito</button>
+	`;
 }
 
 imprimirProdEnHTML(instrumentos)

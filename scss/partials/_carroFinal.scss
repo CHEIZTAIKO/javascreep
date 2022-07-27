@@ -1,0 +1,16 @@
+.carro-final{
+    width: 50%;
+    margin: 10px auto;
+    display:flex;
+    flex-direction: column;
+    h5{
+        font-size: 2rem;
+        padding: 10px;
+    }
+    .vaciar-carrito{
+        height: 30px;
+        font-size: 1rem;
+        background-color: black;
+        color:white;
+    }
+}
