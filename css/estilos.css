@@ -213,3 +213,18 @@ footer .informacion .autor {
   flex-direction: column;
   width: 90%;
   margin: 10px auto; }
+
+div div .tabla {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto; }
+  div div .tabla thead tr {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }
+  div div .tabla tbody tr {
+    display: flex;
+    justify-content: space-between;
+    text-align: center; }

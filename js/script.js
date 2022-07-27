@@ -6,7 +6,7 @@ class Instrumento{
         this.modelo=inst.modelo
         this.cuerdas=inst.cuerdas
         this.color=inst.color
-        this.precio=inst.precio
+        this.precioTotal=inst.precio
         this.cantidad=cantidad
     }
     agregarUnidad() {
@@ -36,7 +36,7 @@ let contenedorCarrito = document.getElementById("carrito")
 
 let carrito=[]; 
 function carroEnStorage(){
-    let contenidoStorage =JSON.parse(localStorage.getItem("carritoEnStorage"))
+    let contenidoStorage = JSON.parse(localStorage.getItem("carritoStorage"))
     if(contenidoStorage){
         let array=[]
         for(const objeto of contenidoStorage){
@@ -98,13 +98,13 @@ function eliminarDelCarrito(id){
         carrito.splice(index,1)
     }
     swal("producto eliminado","","success")
-    localStorage.setItem("carritoEnStorage",JSON.stringify(carrito));
+    localStorage.setItem("carritoStorage",JSON.stringify(carrito));
     imprimirTabla(carrito);
 }
 
 function eliminarCarrito(){
     carrito = [];
-    localStorage.removeItem("carritoEnStorage");
+    localStorage.removeItem("carritoStorage");
     document.getElementById("carrito").innerHTML = "";
     document.getElementById("acciones-carrito").innerHTML = "";
 }
@@ -127,30 +127,28 @@ function imprimirTabla(array){
                     <th>Accion</th>
                 </tr>
             </thead>
-
             <tbody id="bodyTabla">
             </tbody>
         </table>
     `;
     contenedor.appendChild(tabla);
     let bodyTabla = document.getElementById("bodyTabla")
-    for(let instrumentos of array){
-        let datos = document.createElement("div")
+    for(let instru of array){
+        let datos = document.createElement("tr")
         datos.innerHTML = `
-                <td>${instrumentos.modelo}</td>
-                <td>${instrumentos.cantidad}</td>
-                <td>$${instrumentos.precioTotal}</td>
-                <td><button id="eliminar${instrumentos.id}">Eliminar</button></td>`;
-
+                <td>${instru.modelo}</td>
+                <td>${instru.cantidad}</td>
+                <td>$${instru.precioTotal}</td>
+                <td><button id="eliminar${instru.id}">Eliminar</button></td>`;
         bodyTabla.appendChild(datos);
 
-        let botonEliminar = document.getElementById(`eliminar${instrumentos.id}`);
-        botonEliminar.addEventListener("click", () => eliminarDelCarrito(instrumentos.id));
+        let botonEliminar = document.getElementById(`eliminar${instru.id}`);
+        botonEliminar.addEventListener("click", () => eliminarDelCarrito(instru.id));
     }
 }
 
 imprimirProdEnHTML(instrumentos)
-
+carrito = carroEnStorage();
 
 
 

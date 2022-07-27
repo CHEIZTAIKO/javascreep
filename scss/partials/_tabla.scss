@@ -1,0 +1,26 @@
+div{
+    div{
+        .tabla{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            width: 50%;
+            margin:0 auto;
+            thead{
+                tr{
+                display:flex;
+                justify-content: space-between;
+                text-align: center;
+
+                }
+            }
+            tbody{
+                tr{
+                display:flex;
+                justify-content: space-between;
+                text-align: center;
+                }
+            }
+        }
+    }
+}
