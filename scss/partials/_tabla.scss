@@ -5,20 +5,19 @@ div{
             flex-direction: column;
             border: 1px solid black;
             width: 50%;
-            margin:0 auto;
+            margin:20px auto;
             thead{
                 tr{
                 display:flex;
                 justify-content: space-between;
-                text-align: center;
-
+                padding: 10px;
                 }
             }
             tbody{
                 tr{
                 display:flex;
                 justify-content: space-between;
-                text-align: center;
+                padding: 10px;
                 }
             }
         }
